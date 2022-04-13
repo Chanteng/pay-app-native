@@ -7,13 +7,21 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, {useState} from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
+import CustomInput from "../Component/CustomInput";
+import useWindowDimensions from "react-native/Libraries/Utilities/useWindowDimensions";
 
 const SignIn = (props) => {
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const {height} = useWindowDimensions();
+
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: "white" }} showsVerticalScrollIndicator={false}>
+    <ScrollView style={{ flex: 1, backgroundColor: "white", paddingHorizontal: 16 }} showsVerticalScrollIndicator={false}>
       <ImageBackground
         source={require("../Images/SignIn.png")}
         style={{ height: Dimensions.get("window").height / 2.5 }}
@@ -44,8 +52,9 @@ const SignIn = (props) => {
 
        {/* Form Inputs View */}
 
-       <View style={{marginTop: 50}}>
-       
+       <View style={{marginTop: 5}}>
+       <CustomInput placeholder="Username" value={username} setValue={setUsername} />
+       <CustomInput placeholder="Password" value={password} setValue={setPassword} secureTextEntry={true}  />
        </View>
 
     </ScrollView>

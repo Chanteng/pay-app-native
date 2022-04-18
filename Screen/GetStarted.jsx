@@ -17,7 +17,7 @@ const GetStarted = (props) => {
           See what's happening in the world right now!
         </Text>
         <TouchableOpacity
-        onPress={() => props.navigation.navigate("Register")}
+        onPress={() => props.navigation.navigate("AuthenticationScreen")}
           style={{
             backgroundColor: "#024fff",
             height: 50,
@@ -41,7 +41,7 @@ const GetStarted = (props) => {
 
       <View style={styles.footer} >
         <Text style={{ fontSize: 20}}>Have an account already?</Text>
-        <TouchableOpacity onPress={() => props.navigation.navigate("SignIn")} >
+        <TouchableOpacity onPress={() => props.navigation.navigate("AuthenticationScreen")} >
         <Text style={{ fontSize: 20, marginLeft: 10, color: "#024fff"}} >Sign In</Text>
         </TouchableOpacity>
         

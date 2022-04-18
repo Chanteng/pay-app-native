@@ -7,6 +7,7 @@ import Register from "./Screen/Register";
 import SignIn from "./Screen/SignIn";
 import AuthenticationScreen from "./Screen/AuthenticationScreen";
 import Input from "./Screen/Input";
+import SendMoney from "./Screen/SendMoney";
 
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -25,6 +26,7 @@ const App = () => {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="AuthenticationScreen" component={AuthenticationScreen} />
       <Stack.Screen name="Input" component={Input} />
+      <Stack.Screen name="SendMoney" component={SendMoney} />
     </Stack.Navigator>
     </NavigationContainer>
   );

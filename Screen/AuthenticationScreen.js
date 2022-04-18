@@ -35,7 +35,7 @@ const AuthenticationScreen = (props) => {
 
   useEffect(()=>{
     textInput.focus()
-  })
+  }, [])
   return (
     <View style={styles.container}>
       <KeyboardAvoidingView

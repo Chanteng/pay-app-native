@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity } from "r
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from '@expo/vector-icons';
+import Slider from "../Component/Slider"
 
 const Home = (props) => {
   return (
@@ -61,6 +62,7 @@ const Home = (props) => {
          </View>
         </TouchableOpacity>
       </View>
+      <Slider />
     </SafeAreaView>
   );
 };
